@@ -6,7 +6,7 @@ const Changeexpense = () => {
             <div className='lg:ml-96 ml-14'>
                 <h1 className='text-3xl pb-5 mt-10'>Expenses</h1>
                 <hr />
-                <form action="" className='lg:ml-10 mt-5 lg:pr-5 lg:mr-0 ml-10'>
+                <form action="" className='lg:ml-10 mt-5 inline-block lg:justify-normal justify-center ml-10'>
                     <label htmlFor="" className='text-2xl font-semibold lg:pt-2 lg:pr-96 '>Date of expense</label><br />
 
                     <input
@@ -32,7 +32,7 @@ const Changeexpense = () => {
                         placeholder="Email address" /><br />
                     
 
-                    <button type="submit" className='text-2xl bg-black text-white pl-6 pr-6 rounded-full'>Add</button>
+                    <button type="submit" className='text-2xl lg:ml-0 ml-14 bg-black text-white pl-6 pr-6 pt-1 pb-1 rounded-md hover:rounded-full flex justify-center'>Add</button>
                 </form>
             </div>
 

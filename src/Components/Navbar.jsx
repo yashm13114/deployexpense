@@ -9,6 +9,7 @@ import { FaCirclePlus  } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Disclosure } from "@headlessui/react";
 import { TiLockClosed } from "react-icons/ti";
+import { AiFillSetting } from "react-icons/ai";
 // import { RiLockPasswordLine } from 'react-icons/cg'
 const Navbar = () => {
   return (
@@ -42,21 +43,22 @@ const Navbar = () => {
               </div>
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
 
-                <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                <FaCirclePlus className="text-2xl text-gray-600 group-hover:text-white " />
-                  <a href="/Changeexpense">Add Expense</a>
+                <h3 className="text-base flex text-gray-800 group-hover:text-white font-semibold ">
+                <FaCirclePlus className="text-xl text-gray-600 group-hover:text-white " />
+                  <a href="/Changeexpense" className='ml-4'>Add Expense</a>
                 </h3>
               </div>
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
 
-                <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                <TiLockClosed className="text-2xl text-gray-600 group-hover:text-white " />
-                 <a href="/ManageExpense">Manage Expense</a> 
+                <h3 className="text-base flex text-gray-800 group-hover:text-white font-semibold ">
+                <AiFillSetting className="text-2xl text-gray-600 group-hover:text-white mr-4" />
+                 <a href="/ManageExpense" className=''>Manage Expense</a> 
                 </h3>
               </div>
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
                 {/* <MdOutlineSpaceDashboard className="text-2xl text-gray-600 group-hover:text-white " /> */}
-                <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
+                <h3 className="text-base flex text-gray-800 group-hover:text-white font-semibold ">
+                <TiLockClosed className="text-2xl text-gray-600 group-hover:text-white mr-3" />
                   {/* <RiLockPasswordLine /> */}
                   Change Password
                 </h3>

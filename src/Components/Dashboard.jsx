@@ -5,7 +5,7 @@ const Dashboard = () => {
     <>
       <div className=' '>
         <h1 className=' text-4xl mt-10 lg:ml-96 ml-14'>Dashboard</h1>
-        <div className='mt-10 lg:flex flex-wrap justify-around lg:ml-80 ml-14'>
+        <div className='mt-10 lg:flex inline-block lg:justify-evenly lg:ml-80 ml-14'>
           <div className='drop-shadow-2xl text-2xl'>
         
             <div
@@ -28,7 +28,7 @@ const Dashboard = () => {
             </div>
 
           </div>
-          <div className='drop-shadow-2xl text-2xl'>
+          <div className='drop-shadow-2xl text-2xl lg:mt-0 mt-10'>
          
             <div
               className="block rounded-lg bg-white text-center shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
@@ -50,7 +50,7 @@ const Dashboard = () => {
             </div>
 
           </div> 
-          <div className='drop-shadow-2xl text-2xl '>
+          <div className='drop-shadow-2xl text-2xl lg:mt-0 mt-10'>
         
             <div
               className="block rounded-lg bg-white text-center shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
@@ -72,7 +72,7 @@ const Dashboard = () => {
             </div>
 
           </div>
-          <div className='drop-shadow-2xl text-2xl'>
+          <div className='drop-shadow-2xl text-2xl lg:mt-0 mt-10'>
            
             <div
               className="block rounded-lg bg-white text-center shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
