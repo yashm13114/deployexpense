@@ -5,28 +5,13 @@ import {
   MdOutlineLogout,
 } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+import { FaCirclePlus  } from "react-icons/fa6";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Disclosure } from "@headlessui/react";
+import { TiLockClosed } from "react-icons/ti";
 // import { RiLockPasswordLine } from 'react-icons/cg'
 const Navbar = () => {
   return (
-    // <div>
-    //     <div className='text-3xl text-blue-500 bg-black pl-6 pt-7 pb-7'>
-    //         <h1 className=''>Daily Expense Tracker</h1>
-
-    //     </div>
-
-    //     <div className='pl-6 mt-10 flex '>
-    //         <ul className='inline-grid space-x-0 space-y-10'>
-    //             <li><a href='/Dashboard'>Dashboard</a></li>
-    //             <li>Expenses</li>
-    //             <li>Expense Report</li>
-    //             <li>Profile</li>
-    //         </ul>
-    //         <h1 className='ml-72 align-middle mt-16 text-6xl '>Welcome to Daily Expense Tracker</h1>
-
-    //     </div>
-    // </div>
     <div>
       <Disclosure as="nav">
         <Disclosure.Button className="absolute top-4 right-4 inline-flex items-center peer justify-center rounded-md p-2 text-gray-800 hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white group">
@@ -58,13 +43,15 @@ const Navbar = () => {
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
 
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
+                <FaCirclePlus className="text-2xl text-gray-600 group-hover:text-white " />
                   <a href="/Changeexpense">Add Expense</a>
                 </h3>
               </div>
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
 
                 <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                  Manage Expense
+                <TiLockClosed className="text-2xl text-gray-600 group-hover:text-white " />
+                 <a href="/ManageExpense">Manage Expense</a> 
                 </h3>
               </div>
               <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
