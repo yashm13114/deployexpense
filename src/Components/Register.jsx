@@ -4,8 +4,11 @@ import {
     Ripple,
     initTE,
 } from "tw-elements";
+import {useNavigate} from "react-router-dom"
+import { toast } from 'react-toastify';
 const Register = () => {
     initTE({ Input, Ripple });
+    const navigate = useNavigate();
     const [user, setUser] = useState({
         name: "", email: "", password: "", cpassword: ""
     })
@@ -37,21 +40,24 @@ const Register = () => {
             window.alert("Something went wrong");
         }
         else {
-            window.alert("register successfully");
+             toast.success("Register successfully", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored"
+            })
+            navigate('/Login')
             console.log("register successfully");
-            // history.push("/login")
-            // navigate('/');
+
         }
     }
 
     const [isLoginMode, setIsLoginMode] = useState(true)
-    // const Switchmode = () => {
-
-    //     setIsLoginMode(prevMode => !prevMode)
-    // }
-  
-
-
+    
     return (
         <>
             <section className="h-screen">
@@ -89,7 +95,7 @@ const Register = () => {
                                 <div className="relative mb-6" data-te-input-wrapper-init>
                                     <input
                                         type="text"
-                                        className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                        className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-black dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                         id="exampleFormControlInput2"
                                         value={user.email}
                                         name='email'
@@ -106,7 +112,7 @@ const Register = () => {
                                 <div className="relative mb-6" data-te-input-wrapper-init>
                                     <input
                                         type="password"
-                                        className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                                        className="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-black dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                                         id="exampleFormControlInput22"
                                         value={user.password}
                                         name='password'
@@ -141,7 +147,7 @@ const Register = () => {
 
 
 
-                                    <a href="#!">Forgot password?</a>
+                                    <a href="#!" className='text-blue-400'>Forgot password?</a>
                                     {/* {isLoginMode ? '' : 'Forgot password?'} */}
                                 </div>
 
@@ -155,7 +161,7 @@ const Register = () => {
                                         {/* {isLoginMode ? 'LOGIN' : 'Register'} */}
                                         Register
                                     </button>
-                                    <a href="/Login">Already have an account?</a>
+                                    <a href="/Login" className='ml-4'>Already have an account?</a>
 
 
                                 </div><br /><br />

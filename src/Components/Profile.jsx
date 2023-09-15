@@ -25,17 +25,17 @@ const Profile = () => {
             }
         } catch (err) {
             console.log(err)
-             navigate('/Register')
-            toast.info("Please register", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored"
-            })
+            //  navigate('/Register')
+            // toast.info("Please register", {
+            //     position: "top-right",
+            //     autoClose: 5000,
+            //     hideProgressBar: false,
+            //     closeOnClick: true,
+            //     pauseOnHover: true,
+            //     draggable: true,
+            //     progress: undefined,
+            //     theme: "colored"
+            // })
            
         
         }
