@@ -5,7 +5,7 @@ const Dashboard = () => {
     <>
       <div className=' '>
         <h1 className=' text-4xl mt-10 lg:ml-96 ml-14'>Dashboard</h1>
-        <div className='mt-10 lg:flex inline-block lg:justify-evenly lg:ml-80 ml-14'>
+        <div className='mt-10 lg:flex md:flex-auto  inline-block lg:justify-evenly md:justify-around  lg:ml-80 ml-14'>
           <div className='drop-shadow-2xl text-2xl'>
         
             <div
