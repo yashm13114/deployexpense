@@ -1,6 +1,7 @@
 import React from 'react'
-
+import { UserContext } from '../App';
 const Dashboard = () => {
+  
   return (
     <>
       <div className=' '>

@@ -122,6 +122,14 @@ const Login = () => {
                                     >Password
                                     </label>
                                 </div>
+                                
+                                <div className="mb-6 flex items-center justify-between">
+
+
+
+                                    <a href="#!" className='text-blue-400'>Forgot password?</a>
+                                    {/* {isLoginMode ? '' : 'Forgot password?'} */}
+                                </div>
 
                                 <p className='flex justify-center'>Don't have an account?<a href="/Register">Register</a></p>
 

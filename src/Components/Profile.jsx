@@ -13,29 +13,20 @@ const Profile = () => {
                     "Content-Type": "application/json"
                 }
             })
-            const data = res.json()
+            const data = res.json();
             console.log(data)
             setuserData(data)
 
-            if(!res.status === 200){
+            if(res.status === 200){
+                console.log("successful")
+               
+            }else{
                 const error = new Error(res.error);
                 throw error;
-            }else{
-                console.log(err)
             }
         } catch (err) {
             console.log(err)
-            //  navigate('/Register')
-            // toast.info("Please register", {
-            //     position: "top-right",
-            //     autoClose: 5000,
-            //     hideProgressBar: false,
-            //     closeOnClick: true,
-            //     pauseOnHover: true,
-            //     draggable: true,
-            //     progress: undefined,
-            //     theme: "colored"
-            // })
+         
            
         
         }
@@ -58,7 +49,7 @@ const Profile = () => {
                                 </div>
                                 <div className="text-center mt-12">
                                     <h3 className="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
-                                        {userData.name}
+                                       
                                     
                                     </h3>
 

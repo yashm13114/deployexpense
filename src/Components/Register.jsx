@@ -40,18 +40,51 @@ const Register = () => {
             window.alert("Something went wrong");
         }
         else {
-             toast.success("Register successfully", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "colored"
-            })
-            navigate('/Login')
-            console.log("register successfully");
+            if(!name || !email || !password || !cpassword){
+                toast.error("Please fill all the fields", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored"
+                })
+
+            }else{
+                if(password!==cpassword){
+                    toast.error("Password should be match", {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored"
+                    })
+
+
+                }else{
+                    toast.success("Register successfully", {
+                        position: "top-right",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored"
+                    })
+                    navigate('/Login')
+                    console.log("register successfully");
+
+                }
+                
+
+            }
+             
 
         }
     }
@@ -143,13 +176,6 @@ const Register = () => {
                                 </div>
                                     
 
-                                <div className="mb-6 flex items-center justify-between">
-
-
-
-                                    <a href="#!" className='text-blue-400'>Forgot password?</a>
-                                    {/* {isLoginMode ? '' : 'Forgot password?'} */}
-                                </div>
 
                                 <div className="text-center lg:text-left">
                                     <button
