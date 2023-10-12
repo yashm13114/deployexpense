@@ -17,6 +17,19 @@ import { UserContext } from '../App';
 const Navbar = () => {
 
   const { state, dispatch } = useContext(UserContext)
+  const notlogin = () => {
+    toast.error("Please Register/Login first", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored"
+    })
+
+  }
 
   const RendeMenu = () => {
     if (state) {
@@ -27,7 +40,7 @@ const Navbar = () => {
               <h1 className="text-base text-center cursor-pointer font-bold text-black border-b border-gray-100 pb-4 w-full">
                 Menu
               </h1>
-              <div className=" my-4 border-b border-gray-100 pb-4">
+              <div className="my-4 border-b border-gray-100 pb-4">
                 <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
                   <MdOutlineSpaceDashboard className="text-2xl text-gray-600 group-hover:text-white " />
                   <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
@@ -82,8 +95,8 @@ const Navbar = () => {
         </>
       )
     } else {
-      
-      
+
+
       return (
         <>
           <div className="p-6 w-1/2 h-screen bg-white z-20 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
@@ -94,22 +107,22 @@ const Navbar = () => {
               <div className=" my-4 border-b border-gray-100 pb-4">
                 <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
                   <MdOutlineSpaceDashboard className="text-2xl text-gray-600 group-hover:text-white " />
-                  <h3 className="text-base text-gray-800 group-hover:text-white font-semibold ">
-                    <a href="/">Dashboard</a>
+                  <h3 className="text-base text-gray-800 group-hover:text-white font-semibold " >
+                    <a href="">Dashboard</a>
                   </h3>
                 </div>
                 <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
 
-                  <h3 className="text-base flex text-gray-800 group-hover:text-white font-semibold ">
+                  <h3 className="text-base flex text-gray-800 group-hover:text-white font-semibold " >
                     <FaCirclePlus className="text-xl text-gray-600 group-hover:text-white " />
-                    <a href="/" className='ml-4'>Add Expense</a>
+                    <a href="" className='ml-4'>Add Expense</a>
                   </h3>
                 </div>
-                <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
+                <div  className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
 
-                  <h3 className="text-base flex text-gray-800 group-hover:text-white font-semibold ">
+                  <h3 className="text-base flex text-gray-800 group-hover:text-white font-semibold " >
                     <AiFillSetting className="text-2xl text-gray-600 group-hover:text-white mr-4" />
-                    <a href="/" className=''>Manage Expense</a>
+                    <a href="" className=''>Manage Expense</a>
                   </h3>
                 </div>
                 <div className="flex mb-2 justify-start items-center gap-4 pl-5 hover:bg-gray-900 p-2 rounded-md group cursor-pointer hover:shadow-lg m-auto">
@@ -119,11 +132,11 @@ const Navbar = () => {
                     <a href="/Register" className=''>Login/Register</a>
                   </h3>
                 </div>
-              
+
 
               </div>
 
-             
+
             </div>
           </div>
         </>

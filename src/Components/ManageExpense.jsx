@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { UserContext } from '../App';
 const ManageExpense = () => {
-    
+
+
     return (
         <>
             <div className="flex flex-col mt-20 lg:w-3/4 w-4/5 lg:ml-72 ml-10">
@@ -49,7 +51,7 @@ const ManageExpense = () => {
                         </div>
                     </div>
                 </div>
-                
+
 
 
 

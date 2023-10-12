@@ -6,7 +6,7 @@ const Logout = () => {
     const {state,dispatch} = useContext(UserContext)
     const navigate = useNavigate();
     useEffect(()=>{
-        fetch('http://localhost:5000/logout', {
+        fetch('http://localhost:7000/logout', {
                 method: 'GET',
                 headers: {
                     Accept: "application/json",

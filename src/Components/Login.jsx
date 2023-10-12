@@ -17,7 +17,7 @@ const Login = () => {
     const LoginUser = async (e) => {
         e.preventDefault();
 
-        const res = await fetch('http://localhost:5000/login', {
+        const res = await fetch('http://localhost:7000/login', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -127,7 +127,7 @@ const Login = () => {
 
 
 
-                                    <a href="#!" className='text-blue-400'>Forgot password?</a>
+                                    <a href="/Reset" className='text-blue-400'>Forgot password?</a>
                                     {/* {isLoginMode ? '' : 'Forgot password?'} */}
                                 </div>
 

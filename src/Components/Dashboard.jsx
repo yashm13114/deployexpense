@@ -1,7 +1,7 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import { UserContext } from '../App';
 const   Dashboard = () => {
-  
+  const { state, dispatch } = useContext(UserContext)
   return (
     <>
       <div className=' '>
